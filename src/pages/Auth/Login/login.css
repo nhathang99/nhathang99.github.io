@@ -1,0 +1,45 @@
+.login {
+  background-image: url('https://cf.shopee.vn/file/5569eb9dc7e09e2dbed5315b8f2ea8ba');
+  min-width: max-content;
+}
+.container {
+  padding: 8rem;
+  display: flex;
+}
+.banner-login {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.form-wrapper {
+  flex: 0 0 50%;
+  max-width: 50%;
+  box-shadow: 0 3px 10px rgb(0, 0, 0 / 14%);
+  border-radius: 0.4rem;
+  background-color: #fff;
+  padding: 3.5rem 3rem 5rem;
+}
+.form-title-login {
+  font-size: 20px;
+  margin-bottom: 3rem;
+  color: #222;
+  text-transform: capitalize;
+}
+.form-control {
+  margin-bottom: 2.5rem;
+}
+.button {
+  margin-bottom: 3rem;
+  width: 100%;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+.form-footer {
+  text-align: center;
+}
+.form-footer span {
+  margin-right: 1rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+.form-footer span link {
+  color: red;
+}
