@@ -1,5 +1,5 @@
-import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit'
-import { de } from 'date-fns/locale'
+import { configureStore } from '@reduxjs/toolkit'
+
 import authReducer from './pages/Auth/authslice'
 
 const rootReducer = {

@@ -12,7 +12,6 @@ const FilterPanel = ({ categories, filters }) => {
   const query = qs.parse(window.location.search)
   const [activeId, setActiveId] = useState(query.category ?? '')
   const navigate = useNavigate()
-  const query1 = useQuery()
   const {
     control,
     handleSubmit,
@@ -118,12 +117,14 @@ const FilterPanel = ({ categories, filters }) => {
               render={({ field }) => (
                 <S.PriceRangeInput
                   placeholder="Từ"
-                  onChange={field.onChange}
+                  onChange={value => {
+                    clearErrors()
+                    field.onChange(value)
+                  }}
                   value={getValues('minPrice')}
                 />
               )}
             />
-
             <S.PriceRangeLine>—</S.PriceRangeLine>
             {/* <S.PriceRangeInput placeholder="Đến" /> */}
             <Controller
@@ -133,7 +134,10 @@ const FilterPanel = ({ categories, filters }) => {
               render={({ field }) => (
                 <S.PriceRangeInput
                   placeholder="Từ"
-                  onChange={field.onChange}
+                  onChange={value => {
+                    clearErrors()
+                    field.onChange(value)
+                  }}
                   value={getValues('maxPrice')}
                 />
               )}

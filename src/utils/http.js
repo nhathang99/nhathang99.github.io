@@ -1,13 +1,15 @@
-import { configure } from '@testing-library/react'
 import axios from 'axios'
 import { toast } from 'react-toastify'
 import LocalStorage from 'src/constants/localStorage'
 // goi getUser: can token truyen len
 // goi product : khong can token
+//interceptors thuong dung de cau hinh du lieu tra ve hoac truyen len
+//khi goi api no di qua interceptors, khi api tra ve deu di qua interceptors
+
 class Http {
   constructor() {
     this.instance = axios.create({
-      baseURL: 'https://api-ecom.duthanhduoc.com/',
+      baseURL: process.env.BASE_URL || 'https://api-ecom.duthanhduoc.com/',
       timeout: 10000,
       headers: {
         'Content-Type': 'application/json'
@@ -61,5 +63,3 @@ class Http {
 
 const http = new Http()
 export default http
-//interceptors thuong dung de cau hinh du lieu tra ve hoac truyen len
-//khi goi api no di qua interceptors, khi api tra ve deu di qua interceptors

@@ -10,6 +10,7 @@ import NotFound from './pages/NotFound/NotFound'
 import RegisterLayout from './Layouts/RegisterLayout/RegisterLayout'
 import MainLayout from './Layouts/MainLayout/MainLayout'
 import ProductDetail from './pages/ProductDetail/ProductDetail'
+import User from './pages/User/User'
 function App() {
   return (
     <div className="App">
@@ -33,6 +34,15 @@ function App() {
           }
         ></Route>
         <Route
+          path={path.user}
+          exact
+          element={
+            <MainLayout>
+              <User />
+            </MainLayout>
+          }
+        ></Route>
+        <Route
           path={path.login}
           exact
           element={
@@ -50,6 +60,7 @@ function App() {
             </RegisterLayout>
           }
         ></Route>
+
         <Route path={path.notFound} exact element={<NotFound />}></Route>
       </Routes>
     </div>
