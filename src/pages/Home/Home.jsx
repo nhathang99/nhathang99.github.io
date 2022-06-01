@@ -49,25 +49,6 @@ export default function Home() {
         setProducts(res.data)
       })
   }, [query])
-
-  // useEffect(() => {
-  //   const _getProducts = async () => {
-  //     const data = await dispatch(getProducts())
-  //     const res = unwrapResult(data)
-  //     setProducts(res.data)
-  //   }
-  //   _getProducts()
-  //     const data = await dispatch(getProducts())
-  // }, [])
-
-  // useEffect(() => {
-  //   dispatch(getProducts())
-  //     .then(unwrapResult)
-  //     .then(res => {
-  //       setProducts(res.data)
-  //     })
-  // }, [dispatch])
-
   return (
     <div>
       <S.Container className="container">
