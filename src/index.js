@@ -1,13 +1,11 @@
 import React from 'react'
-import dotenv from 'dotenv'
+import store from './store'
 import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
-import store from './store'
-dotenv.config()
 
 ReactDOM.render(
   <React.StrictMode>
